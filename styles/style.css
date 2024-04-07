@@ -83,15 +83,6 @@
   text-transform: uppercase;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-  min-height: 100%;
-}
-
 .aligned-text {
   display: block;
   letter-spacing: 4px;
