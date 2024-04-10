@@ -301,13 +301,13 @@
   align-self: center;
 }
 
-.about_column-left{
+.about_column-left {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.about_column-right{
+.about_column-right {
   display: flex;
   width: 100%;
   flex-direction: column;
