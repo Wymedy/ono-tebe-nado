@@ -98,35 +98,35 @@
   font-size: 100px;
   text-transform: uppercase;
   color: white;
+  letter-spacing: 0.3em;
 }
 
 .aligned-text {
   display: block;
   text-align: left;
   line-height: 115%;
-  letter-spacing: 0.3em;
-  padding-bottom: 20px;
 }
 
 .aligned-text_center {
   display: block;
   text-align: center;
-  letter-spacing: 0.3em;
   line-height: 100%;
-  padding-bottom: 20px;
+  padding: 20px 0px;
 }
 
 .aligned-text_right {
   display: block;
   text-align: right;
-  letter-spacing: 0.3em;
   line-height: 100%;
-  padding-left: 585px;
   padding-bottom: 10px;
 }
 
 .letter-spacing-extended {
   letter-spacing: 0.6em;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 .cover__description {
@@ -173,7 +173,6 @@
 }
 
 .lots__heading {
-  font-family: Raleway, sans-serif;
   display: block;
   font-style: normal;
   font-weight: 700;
@@ -186,7 +185,8 @@
 
 .lots__card-list {
   display: flex;
-  padding: 0 26px 0;
+  flex-wrap: wrap;
+  padding: 0 24px 0;
   margin-bottom: 30px;
   gap: 25px;
   list-style: none;
@@ -194,7 +194,7 @@
 
 .lots__card-list-item {
   display: flex;
-  width: 344px;
+  width: 334px;
   min-height: 563px;
   flex-grow: 1;
 }
@@ -209,6 +209,10 @@
   display: flex;
   height: 100%;
   flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
 .card__title {
@@ -242,27 +246,15 @@
 }
 
 .card_type_film {
-  position: relative;
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .card_type_book {
-  position: relative;
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .card_type_picture {
-  position: relative;
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .lots__look-more-link {
@@ -277,10 +269,11 @@
 
 .about {
   display: grid;
-  margin: 141px 0px 158px 0px;
+  margin: 141px 0px 182px 0px; /* По макету нижний 180px, но при таких значениях верстка плывет */
   padding: 35px 24px 0px 20px;
   gap: 20px;
   grid-template-columns: 344px auto;
+  font-family: Raleway, sans-serif;
 }
 
 .about_logo {
@@ -308,14 +301,14 @@
 .about_column-right {
   display: flex;
   width: 100%;
+  gap: 23px;  /* По макету 24px, но тут тоже при таких значениях верстка плывет */
   flex-direction: column;
   justify-content: start;
 }
 
 .about_title {
   display: flex;
-  padding: 100px 0;
-  font-family: Raleway, sans-serif;
+  padding: 100px 0px 80px;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -327,7 +320,6 @@
   grid-column-start: 2;
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 25px;
   line-height: 119%;
 }
 
@@ -351,9 +343,6 @@
 .footer_link_active {
   text-decoration: none;
 }
-.footer_links-list-item_no-bullit {
-  list-style-type: none;
-}
 
 .footer__link {
   text-decoration: underline;
@@ -363,6 +352,7 @@
 
 .footer_social-list {
   display: flex;
+  flex-wrap: nowrap;
   gap: 48px;
   justify-content: space-between;
   list-style: none;
